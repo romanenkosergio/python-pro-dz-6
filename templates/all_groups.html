@@ -1,0 +1,14 @@
+{% extends 'extends/base.html' %}
+{% block content %}
+    <h1>{{ title }} - {{ groups | length }}</h1>
+    <table border="1">
+    <tr>
+        <th>Group Name</th>
+    </tr>
+        {% for group in groups %}
+            <tr>
+                <td>{{ group.group_name }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

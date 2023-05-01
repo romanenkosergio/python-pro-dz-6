@@ -1,0 +1,20 @@
+{% extends 'extends/base.html' %}
+{% block content %}
+    <h1>{{ title }} - {{ teachers | length }}</h1>
+    <table border="1">
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Subject</th>
+        <th>Age</th>
+    </tr>
+        {% for teacher in teachers %}
+            <tr>
+                <td>{{ teacher.first_name }}</td>
+                <td>{{ teacher.last_name }}</td>
+                <td>{{ teacher.subject }}</td>
+                <td>{{ teacher.birthday }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
